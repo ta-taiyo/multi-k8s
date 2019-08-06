@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    component: web
+  name: client-svc
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    component: web
+  type: ClusterIP
+status:
+  loadBalancer: {}
