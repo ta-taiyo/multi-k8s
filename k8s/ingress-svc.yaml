@@ -13,10 +13,10 @@ spec:
           - path: /?(.*)
           # UPDATE THIS LINE ABOVE
             backend:
-              serviceName: client-cluster-ip-service
+              serviceName: client-svc
               servicePort: 3000
           - path: /api/?(.*)
           # UPDATE THIS LINE ABOVE
             backend:
-              serviceName: server-cluster-ip-service
+              serviceName: server-svc
               servicePort: 5000
