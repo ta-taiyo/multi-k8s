@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: worker
-          image: nginx
+          image: taiyo/multi-worker
           env:
             - name: REDIS_HOST
               value: redis-svc

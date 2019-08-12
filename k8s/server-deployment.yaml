@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: nginx
+          image: taiyo/multi-server
           ports:
             - containerPort: 5000
           env:
