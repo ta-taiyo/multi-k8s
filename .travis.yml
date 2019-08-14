@@ -19,10 +19,9 @@ before_install:
 
 script:
   - docker run -e CI=true taiyo/docker-react npm run test
-##
 
 deploy:
   provider: script
-  script: bash ./deploy.sh
+  script: bash deploy.sh
   on:
     branch: master
