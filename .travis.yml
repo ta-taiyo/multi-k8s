@@ -19,7 +19,7 @@ before_install:
 
 script:
   - docker run -e CI=true taiyo/docker-react npm run test
-
+##
 
 deploy:
   provider: script
