@@ -1,6 +1,6 @@
-docker build -t taiyo/multi-client:latest -t taiyo/multi-client:$SHA -f ./client/Dcokerfile ./client
-docker build -t taiyo/multi-server:latest -t taiyo/multi-server:$SHA -f ./server/Dcokerfile ./server
-docker build -t taiyo/multi-worker:latest -t taiyo/multi-worker:$SHA -f ./worker/Dcokerfile ./worker
+docker build -t taiyo/multi-client:latest -t taiyo/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t taiyo/multi-server:latest -t taiyo/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t taiyo/multi-worker:latest -t taiyo/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push taiyo/multi-client:latest
 docker push taiyo/multi-server:latest
