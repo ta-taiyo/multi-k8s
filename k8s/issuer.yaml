@@ -1,0 +1,13 @@
+## Issuer is for attempting to get certificate.
+
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spce:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: 'gakkigakki.it@gmail.com'
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    http01: {}
