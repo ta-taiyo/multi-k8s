@@ -18,12 +18,12 @@ spec:
     - host: test-k8s.com
     - http:
         paths:
-          - path: /?(.*)
+          - path: / # - path: /?(.*)
           # UPDATE THIS LINE ABOVE
             backend:
               serviceName: client-svc
               servicePort: 3000
-          - path: /api/?(.*)
+          - path: /api/?(.*)  # path: /api/?(.*)
           # UPDATE THIS LINE ABOVE
             backend:
               serviceName: server-svc
