@@ -10,7 +10,7 @@ spec:
   commonName: test-k8s.com
   dnsNames:
     - test-k8s.com
-    - www.k8s-multi.com
+    - www.test-k8s.com
   acme:
     config:
       - http01:
