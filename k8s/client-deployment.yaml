@@ -14,6 +14,9 @@ spec:
     spec:
       containers:
       - image: taiyo/multi-client
+        imagePullPolicy: IfNotPresent
         name: client
         resources: {}
+        ports:
+          - containerPort: 3000
 status: {}
