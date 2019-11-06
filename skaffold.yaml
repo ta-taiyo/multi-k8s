@@ -9,9 +9,9 @@ build:
       docker:
         dockerfile: Dockerfile.dev
       sync:
-        '**/*.js': .
-        '**/*.css': .
-        '**/*.html': .
+        "**/*.js": .
+        "**/*.css": .
+        "**/*.html": .
 deploy:
   kubectl:
     manifests:
