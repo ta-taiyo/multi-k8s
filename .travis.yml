@@ -12,13 +12,13 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project poc-for-the-central-government
-  - gcloud config set compute/zone asia-northeast1-a	
+  - gcloud config set compute/zone asia-northeast1-a
   - gcloud container clusters get-credentials multi-k8s
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t taiyo/docker-react -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true taiyo/docker-react npm run test
+  - docker run -e CI=true taiyo/docker-react npm run test # DockerHub Username
 
 deploy:
   provider: script
